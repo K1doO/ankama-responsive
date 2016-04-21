@@ -1,0 +1,83 @@
+header {
+	border-top: 4px solid #ff6631;
+	background: url("images/bg_header.jpg") no-repeat;
+	padding-bottom: 20px;
+}
+
+/* Menu Container */
+
+.menu-container {
+	margin-top: 50px;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+.menu-wrapper {
+	width: 50px;
+	cursor: pointer;
+	padding: 3px 0 0 40px;
+}
+
+.menu-wrapper .menu-box {
+	border: 1px solid #ff6631;
+	height: 50px;
+	width: 50px;
+}
+
+.menu-wrapper:hover .menu-box {
+	border-color: #FFF;
+}
+
+.menu-wrapper:hover .menu-box span {
+	border-color: #FFF;
+}
+
+.menu-wrapper:hover .menu-title span {
+	color: #FFF;
+}
+
+.menu-wrapper .menu-box span {
+	border-top: 4px solid #ff6631;
+	margin: 9px auto 0 auto;
+	width: 34px;
+	display: block;
+}
+
+.menu-wrapper .menu-title {
+	text-align: center;
+	width: 50px;
+}
+
+.menu-wrapper .menu-title span {
+	color: #ff6631;
+	font-size: 11px;
+	font-family: sans-serif;
+	vertical-align: text-top;
+}
+
+/* Logo Container */
+
+.logo-container {
+	margin-top: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.logo-wrapper img {
+	float: right;
+}
+
+/* Social Media */
+
+.social {
+	display: inline-block;
+	margin-top: 40px;
+	float: right;
+}
+
+.social-wrapper img {
+	height: 40px;
+	width: 40px;
+	background: #ff6631;
+	display: inline-block;
+}
