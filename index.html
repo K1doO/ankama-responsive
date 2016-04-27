@@ -4,29 +4,77 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#menu-btn").on("click", function() {
+					$("#menu-screen").addClass("visible");
+					$("#menu-screen").removeClass("invisible");
+				});
+
+				$("#menu-screen").on("click", function() {
+					$("#menu-screen").addClass("invisible");
+					$("#menu-screen").removeClass("visible");
+				})
+			});
+		</script>
 		<title>Ankama</title>
 	</head>
 	<body>
-		<header class="col-md-12">
-			<div class="col-md-4 menu-container">
-				<div class="col-md-offset-1 menu-wrapper">
-					<div class="menu-box">
+		<section id="menu-screen" class="selected-menu invisible">
+			<div class="wrapper">
+				<ul>
+					<li class="item">
+						<a href="">HOME</a>
+						<div class="line"></div>
+					</li>
+					<li class="item">
+						<a href="">GAMES</a>
+						<div class="line"></div>
+					</li>
+					<li class="item">
+						<a href="">ANIMATIONS</a>
+						<div class="line"></div>
+					</li>
+					<li class="item">
+						<a href="">EDITIONS</a>
+					</li>
+				</ul>
+				<div class="ofers">
+					<span>Jobs</span>
+					<span>Contact</span>
+				</div>
+				<div class="language-container">
+					<span>Language</span>
+					<div class="flag">
 						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div class="menu-title">
-						<span>Menu</span>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 logo-container">
-				<div class="col-md-offset-5 logo-wrapper">
+		</section>
+		<header class="col-md-12">
+			<div class="col-md-2 col-sm-2 menu-container">
+				<div class="menu-wrapper">
+					<div id="menu-btn">
+						<div class="menu-box">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="menu-title">
+							<span>Menu</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-offset-3 col-md-3 col-sm-offset-3 col-sm-3 logo-container">
+				<div class="logo-wrapper">
 					<img src="images/logo.png">
 				</div>
 			</div>
-			<div class="col-md-4 social">
-				<div class="col-md-offset-9 social-wrapper">
+			<div class="col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 social">
+				<div class="social-wrapper">
 					<img src="images/facebook-logo.jpg">
 					<img src="images/youtube-logo.png">
 				</div>
@@ -34,7 +82,7 @@
 		</header>
 		<section class="col-md-12 main-wrapper">
 			<div class="col-md-8 col-md-offset-2 dofus-container">
-				<div class="col-md-3 description">
+				<div class="description">
 					<div class="platforms">
 						<span class="game-type">MMORPG</span>
 						<span>PC, Mac, Linux, Steam</span>
@@ -67,7 +115,7 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-md-offset-2 wakfu-container">
-				<div class="col-md-3 description">
+				<div class="description">
 					<div class="platforms">
 						<span class="game-type">MMORPG</span>
 						<span>PC, Mac, Linux, Steam</span>
@@ -92,7 +140,7 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-md-offset-2 krosmaga-container">
-				<div class="col-md-3 description">
+				<div class="description">
 					<div class="platforms">
 						<span class="game-type">CARD GAME / STRATEGY</span>
 						<span>PC, Mac</span>
@@ -118,7 +166,7 @@
 			</div>
 			<div class="col-md-4 col-md-offset-2 left">
 				<div class="col-md-12 dofustouch-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">MMORPG</span>
 							<span>OS, Android</span>
@@ -136,7 +184,7 @@
 			</div>
 			<div class="col-md-4 left right">
 				<div class="col-md-12 abraca-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">PARTY GAME</span>
 							<span>PC, XBL, PSN</span>
@@ -162,7 +210,7 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-md-offset-2 krosmasterarena-container">
-				<div class="col-md-3 description">
+				<div class="description">
 					<div class="platforms">
 						<span class="game-type">CARD GAME / STRATEGY</span>
 						<span>PC, Mac, Linux, physical board game</span>
@@ -188,7 +236,7 @@
 			</div>
 			<div class="col-md-4 col-md-offset-2 left">
 				<div class="col-md-12 tactilewars-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">ACTION / STRATEGY</span>
 							<span>OS, Android</span>
@@ -215,7 +263,7 @@
 			</div>
 			<div class="col-md-4 left right">
 				<div class="col-md-12 kwann-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">COLLABORATIVE ADVENTURE</span>
 							<span>PC, Mac</span>
@@ -241,7 +289,7 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-md-offset-2 kingtongue-container">
-				<div class="col-md-3 description">
+				<div class="description">
 					<div class="platforms">
 						<span class="game-type">ARCADE & ACTION GAME</span>
 						<span>iOs, Android, Windows Phone</span>
@@ -266,7 +314,7 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-md-offset-2 wakfuraiders-container">
-				<div class="col-md-3 description">
+				<div class="description">
 					<div class="platforms">
 						<span class="game-type">ADVENTURE / ACTION / RPG</span>
 						<span>iOs, Android, Windows Phone</span>
@@ -292,7 +340,7 @@
 			</div>
 			<div class="col-md-4 col-md-offset-2 left">
 				<div class="col-md-12 dofusbattles-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">TOWER DEFENCE</span>
 							<span>iOS, Android</span>
@@ -319,7 +367,7 @@
 			</div>
 			<div class="col-md-4 left right">
 				<div class="col-md-12 fly-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">THINKING / PLATFORM</span>
 							<span>PC, Mac, Linux</span>
@@ -346,7 +394,7 @@
 			</div>
 			<div class="col-md-4 col-md-offset-2 left">
 				<div class="col-md-12 strikerarena-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">SPORT / TACTICAL</span>
 							<span>iOS</span>
@@ -373,7 +421,7 @@
 			</div>
 			<div class="col-md-4 left right">
 				<div class="col-md-12 islandsofwakfu-container container-sm">
-					<div class="col-md-7 col-md-push-4 description">
+					<div class="description">
 						<div class="platforms">
 							<span class="game-type">BEAT'EM ALL / ADVENTURE</span>
 							<span>xbox-360</span>

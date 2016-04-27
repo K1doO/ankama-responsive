@@ -2,8 +2,116 @@ header {
 	border-top: 4px solid #ff6631;
 	background: url("images/bg_header.jpg") no-repeat;
 	padding-bottom: 20px;
+	float: left;
+	width: 100%;
 }
 
+/* Selected Menu */
+
+.visible {
+	visibility: visible;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.selected-menu {
+	background: rgba(0,0,0,0.95);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+.selected-menu ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+.selected-menu .wrapper {
+	width: 300px;
+	margin: 70px auto 0 auto;
+}
+
+.wrapper .item {
+	font-size: 40px;
+	padding: 4px 0 0 0;
+	cursor: pointer;
+}
+
+.wrapper .item a {
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+}
+
+.selected-menu .wrapper .item a:hover {
+	background: #ff6631;
+}
+
+.wrapper .item .line {
+	border-top: 1px solid #ff6631;
+	margin-top: 5px;
+}
+
+.selected-menu .wrapper .language-container {
+	border: 1px solid #6a6a6a;
+	margin: 40px auto 0 auto;
+	background: #424142;
+	padding: 10px;
+	width: 80%;
+}
+
+.selected-menu .wrapper .language-container span {
+	color: #FFF;
+	font-size: 22px;
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+.wrapper .language-container .flag {
+	background: #212121;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.wrapper .language-container .flag:hover {
+	background: #303030;
+}
+
+.language-container .flag span {
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin: 7px auto 0 auto;
+	background: url("images/flags.jpg");
+	background-position: -38px;
+}
+
+.selected-menu .wrapper .ofers {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.selected-menu .wrapper .ofers span {
+	font-size: 20px;
+	color: #a9a9a9;
+	display: block;
+	cursor: pointer;
+	padding: 8px;
+}
+
+.selected-menu .wrapper .ofers span:hover {
+	text-decoration: underline;
+	color: #FFF;
+}
 
 /* Menu Container */
 
@@ -12,9 +120,9 @@ header {
 }
 
 .menu-wrapper {
-	width: 50px;
 	cursor: pointer;
-	padding: 3px 0 0 40px;
+	margin: 3px 0 0 40px;
+	display: inline-block;
 }
 
 .menu-wrapper .menu-box {
@@ -80,89 +188,105 @@ header {
 
 .main-wrapper {
 	margin-top: 10px;
+	float: left;
+	width: 100%;
 }
 
 /* Games Containers */
 
 .main-wrapper .dofus-container {
 	background: url("images/dofus.jpg") no-repeat;
+	background-size: cover;
 	height: 720px;
 }
 
 .main-wrapper .wakfu-container {
 	background: url("images/wakfu.jpg") no-repeat;
+	background-size: cover;
 	height: 474px;
 	margin-top: 10px;
 }
 
 .main-wrapper .krosmaga-container {
 	background: url("images/krosmaga.jpg") no-repeat;
+	background-size: cover;
 	height: 474px;
 	margin-top: 10px;
 }
 
 .main-wrapper .dofustouch-container {
 	background: url("images/dofustouch.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
 
 .main-wrapper .abraca-container {
 	background: url("images/abraca.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
 
 .main-wrapper .krosmasterarena-container {
 	background: url("images/arena.jpg") no-repeat;
+	background-size: cover;
 	height: 474px;
 	margin-top: 10px;
 }
 
 .main-wrapper .tactilewars-container {
 	background: url("images/tactilewars.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
 
 .main-wrapper .kwann-container {
 	background: url("images/kwaan.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
 
 .main-wrapper .kingtongue-container {
 	background: url("images/king.jpg") no-repeat;
+	background-size: cover;
 	height: 474px;
 	margin-top: 10px;
 }
 
 .main-wrapper .wakfuraiders-container {
 	background: url("images/wakfuraider.jpg") no-repeat;
+	background-size: cover;
 	height: 474px;
 	margin-top: 10px;
 }
 
 .main-wrapper .dofusbattles-container {
 	background: url("images/dofusbattles.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
 
 .main-wrapper .fly-container {
 	background: url("images/fun.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
 
 .main-wrapper .strikerarena-container {
 	background: url("images/strikerarena.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
 
 .main-wrapper .islandsofwakfu-container {
 	background: url("images/islandsofwakfu.jpg") no-repeat;
+	background-size: cover;
 	height: 436px;
 	margin-top: 10px;
 }
@@ -180,11 +304,8 @@ header {
 	margin-left: 20px;
 	margin-top: 80px;
 	padding: 0 0 20px 0;
-	/*width: 340px;
-	position: relative;
-	top: 80px;
-	left: 40px;
-	padding-bottom: 20px;*/
+	width: 340px;
+	float: left;
 }
 
 .platforms span {
@@ -238,7 +359,6 @@ header {
 	background: url("images/earth.jpg") no-repeat;
 	background-size: 100%;
 	min-height: 130px;
-
 }
 
 .trailer-container .button {
@@ -246,9 +366,6 @@ header {
 	height: 60px;
 	margin-top: 30px;
 	margin-left: 37.333333%;
-	/*position: absolute;
-	top: 35px;
-	left: 105px;*/
 }
 
 .trailer-container .button img {
@@ -258,6 +375,7 @@ header {
 
 .trailer-container:hover {
 	box-shadow: 0 0 1px #ccc;
+	cursor: pointer;
 }
 
 .trailer-container:hover .button {
@@ -267,14 +385,13 @@ header {
 .info-container .border-top {
 	height: 1px;
 	background: rgba(255,255,255,0.1);
-	margin-top: 15px;
 }
 
 .info-container .website-button {
 	width: 100px;
 	margin: 0 auto;
 	border: 1px solid #ff6631;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 .website-button .button-wrapper {
@@ -315,7 +432,8 @@ header {
 }
 
 .container-sm .description {
-	margin-top: 50px;
+	margin-top: 20px;
+	width: 250px;
 }
 
 .krosmasterarena-container .description .title h3 {
@@ -353,4 +471,10 @@ footer .copyright-info span:hover {
 
 footer .logo {
 	cursor: pointer;
+}
+
+@media (max-width: 992px) {
+	.main-wrapper .col-md-4 {
+		padding-right: 0;
+	}
 }
