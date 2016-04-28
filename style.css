@@ -10,11 +10,33 @@ header {
 
 .visible {
 	visibility: visible;
+	-webkit-animation: visible 0.25s ease-in;
+	-moz-animation: visible 0.25s ease-in;
+	-o-animation: visible 0.25s ease-in;
+	-ms-animation: visible 0.25s ease-in;
+	animation: visible 0.25s ease-in;
+}
+
+@-webkit-keyframes visible {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
 
 .invisible {
 	visibility: hidden;
+	-webkit-animation: hidden 0.5s ease-out;
+	-moz-animation: hidden 0.5s ease-out;
+	-o-animation: hidden 0.5s ease-out;
+	-ms-animation: hidden 0.5s ease-out;
+	animation: hidden 0.5s ease-out;
 }
+
+
+@-webkit-keyframes hidden {
+    100% { opacity: 1;}
+    0% { opacity: 0;}
+}
+
 
 .selected-menu {
 	background: rgba(0,0,0,0.95);
