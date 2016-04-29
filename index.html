@@ -9,20 +9,20 @@
 		<script type="text/javascript">
 			$(function() {
 				$("#menu-btn").on("click", function() {
-					$("#menu-screen").addClass("visible");
-					$("#menu-screen").removeClass("invisible");
+					$("#menu-screen").addClass("c-show");
+					$("#menu-screen").removeClass("c-hide").removeClass("hide");
 				});
 
 				$("#menu-screen").on("click", function() {
-					$("#menu-screen").addClass("invisible");
-					$("#menu-screen").removeClass("visible");
+					$("#menu-screen").addClass("c-hide");
+					$("#menu-screen").removeClass("c-show");
 				})
 			});
 		</script>
 		<title>Ankama</title>
 	</head>
 	<body>
-		<section id="menu-screen" class="selected-menu invisible">
+		<section id="menu-screen" class="selected-menu c-hide hide">
 			<div class="wrapper">
 				<ul>
 					<li class="item">

@@ -8,8 +8,7 @@ header {
 
 /* Selected Menu */
 
-.visible {
-	visibility: visible;
+.c-show {
 	-webkit-animation: visible 0.25s ease-in;
 	-moz-animation: visible 0.25s ease-in;
 	-o-animation: visible 0.25s ease-in;
@@ -17,26 +16,29 @@ header {
 	animation: visible 0.25s ease-in;
 }
 
+.selected-menu.c-hide {
+	pointer-events: none;
+}
+
 @-webkit-keyframes visible {
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
 
-.invisible {
-	visibility: hidden;
-	-webkit-animation: hidden 0.5s ease-out;
-	-moz-animation: hidden 0.5s ease-out;
-	-o-animation: hidden 0.5s ease-out;
-	-ms-animation: hidden 0.5s ease-out;
-	animation: hidden 0.5s ease-out;
+.c-hide {
+	opacity: 0;
+	-webkit-animation: hidden 0.5s ease-in;
+	-moz-animation: hidden 0.5s ease-in;
+	-o-animation: hidden 0.5s ease-in;
+	-ms-animation: hidden 0.5s ease-in;
+	animation: hidden 0.5s ease-in;
 }
 
 
 @-webkit-keyframes hidden {
-    100% { opacity: 1;}
-    0% { opacity: 0;}
+    0% { opacity: 1;}
+    100% { opacity: 0;}
 }
-
 
 .selected-menu {
 	background: rgba(0,0,0,0.95);
@@ -388,6 +390,7 @@ header {
 	height: 60px;
 	margin-top: 30px;
 	margin-left: 37.333333%;
+	margin-right: 37.333333%;
 }
 
 .trailer-container .button img {
